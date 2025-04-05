@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Superman Bean with Constructor Injection -->
+    <bean id="superman" class="com.example.HeroSquadManager.Superman" scope="singleton">
+        <constructor-arg value="Ultra"/>
+        <constructor-arg value="5"/>
+    </bean>
+
+    <!-- WonderWoman Bean (Prototype Scope) -->
+    <bean id="wonderWoman" class="com.example.HeroSquadManager.WonderWoman" scope="prototype"/>
+
+    <!-- TalkingCat Bean (Singleton Scope) -->
+    <bean id="talkingCat" class="com.example.HeroSquadManager.TalkingCat" scope="singleton"/>
+
+</beans>
